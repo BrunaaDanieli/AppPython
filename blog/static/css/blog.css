@@ -18,6 +18,15 @@ h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
 }
 
+.btn-edit {
+    margin-top: 15px;
+    margin-left: 95%;
+}
+
+p {
+    text-align: justify;
+}
+
 .date {
     color: #828282;
 }
