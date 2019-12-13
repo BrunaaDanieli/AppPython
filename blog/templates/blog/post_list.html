@@ -5,9 +5,12 @@
         <a class="new-post" href="/post/new/">New Post</a>
     {% endif %}
     {% for post in posts %}
-        <div class="post">
+        <div class="post line">
             <div class="date">
                 {{ post.published_date }}
+            </div>
+            <div class="date">
+                Author: {{ post.author }}
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>

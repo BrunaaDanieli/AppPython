@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 
@@ -42,3 +42,12 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+
+# def post_delete(request, pk):
+#     post = get_object_or_404(Post, pk=pk)
+#     if request.method == "DELETE":
+#        post.remove
+#        return redirect('post_detail', pk=post.pk)
+#     else:
+#         form = PostForm(instance=post)
+#     return render(request, 'blog/post_edit.html', {'form': form})
