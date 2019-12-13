@@ -53,3 +53,11 @@ p {
 .post h2 a, .post h2 a:visited {
     color: #000000;
 }
+
+.new-post {
+    font-family: 'Lobster', cursive;
+    color: purple;
+    font-size: 23px;
+    margin-left: 85%;
+    text-decoration: none;
+}
